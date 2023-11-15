@@ -22,7 +22,7 @@ const geometry = new THREE.BoxGeometry(20, 20, 20)
 //   opacity: 0.5
 // })
 const material = new THREE.MeshLambertMaterial({
-  color: 'springgreen',
+  color: 'aqua',
   transparent: true,
   opacity: 0.9
 })
@@ -38,7 +38,7 @@ mesh.name = 'hhh'
 scene.add(mesh)
 
 // 点光源
-const light = new THREE.PointLight(0xfff, 1.0);
+const light = new THREE.PointLight(0xffffff, 1.0);
 light.position.set(40, 40, 40);
 scene.add(light);
 
@@ -47,16 +47,16 @@ const lightHelper = new THREE.PointLightHelper(light, 4, '#ffc238')
 scene.add(lightHelper)
 
 // 环境光
-const ambient = new THREE.AmbientLight(0xfff, 0.4)
+const ambient = new THREE.AmbientLight(0xffffff, 0.4)
 scene.add(ambient)
 
 // 平行光
-const direction = new THREE.DirectionalLight(0xfff)
+const direction = new THREE.DirectionalLight(0xffffff)
 direction.position.set(50, 0, 10)
 scene.add(direction)
 
 // 平行光 helper
-const directionHelper = new THREE.DirectionalLightHelper(direction, 2, '#fff')
+const directionHelper = new THREE.DirectionalLightHelper(direction, 2, '#ffffff')
 scene.add(directionHelper)
 
 // 1000 个盒子测试
@@ -69,13 +69,13 @@ scene.add(directionHelper)
 //     opacity: 0.9
 //   })
 //   const mesh = new THREE.Mesh(geometry, material)
-  
+
 //   const x = (Math.random() - 0.5) * 200
 //   const y = (Math.random() - 0.5) * 200
 //   const z = (Math.random() - 0.5) * 200
 
 //   mesh.position.set(x, y ,z)
- 
+
 //   scene.add(mesh)
 // }
 
